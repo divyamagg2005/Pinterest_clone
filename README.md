@@ -1,2 +1,14 @@
-# Pinterest_clone
-This Pinterest clone is a frontend web app built with HTML, CSS, and JavaScript, featuring a responsive image grid, smooth animations, and optimized rendering. It offers a clean browsing experience without authentication or backend integration. NOTE:- Emailjs and Pexels api has been used to make sure its functional
+Pinterest Clone - Image Gallery Web App
+A dynamic Pinterest-style image gallery that fetches and displays images using the Pexels API. The app features a responsive masonry grid layout, real-time search functionality, and lazy loading for smooth performance. Users can also submit feedback via EmailJS.
+
+Features:
+✅ Fetches high-quality images dynamically using the Pexels API
+✅ Masonry grid layout for an authentic Pinterest feel
+✅ Search functionality to find images instantly
+✅ Load more button for seamless browsing
+✅ Email feedback system powered by EmailJS
+✅ Displays the current date dynamically
+
+Tech Stack:
+Frontend: HTML, CSS, JavaScript
+API Integration: Pexels API (for images), EmailJS (for feedback)

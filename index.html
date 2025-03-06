@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="navbar">
+        <img src="assests/mdi_pinterest.svg" alt="logo">
+        <a href="#">Home</a>
+        <a href="#">Today</a>
+        <a href="#">Create</a>
+        <input type="search" placeholder="Search" style="font-family: 'Playfair Display' ,'Inter', 'Libre Baskerville', sans-serif;">
+        <img id="icons" src="assests/notification.svg" alt="notification">
+        <img id="icons" src="assests/message.svg" alt="message">   
+        <img id="icons" src="assests/account.svg" alt="user">
+    </div>
+    <div class="main-body">
+        <h2 id="date">Mar 01, 2025</h2>
+        <h1>Stay Inspired</h1>
+        <div class="masonry-grid" id="masonryGrid">
+            <!-- Images will be loaded here -->
+        </div>
+        <div class="spinner" id="spinner"></div>
+        <button class="load-more" id="loadMoreBtn">Load More</button>
+    </div>
+    <hr>
+    <footer>
+        <p>&copy; 2025 Pinterest, Inc.</p>
+        <p>Terms | Privacy | Interest-based ads</p>
+        <div class="feedback-container">
+            <h3>We'd Love Your Feedback</h3>
+            <form id="feedbackForm" class="feedback-form">
+              <div class="form-group">
+                <label for="visitPurpose">What brought you to our site today?</label>
+                <select id="visitPurpose" name="visitPurpose" required>
+                  <option value="" disabled selected>Select a reason</option>
+                  <option value="browsing">Just browsing for inspiration</option>
+                  <option value="searching">Looking for specific images</option>
+                  <option value="creating">Working on a creative project</option>
+                  <option value="learning">Learning about photography/design</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label>Did you find what you were looking for?</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="taskCompletion" value="yes" required>
+                    <span>Yes</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="taskCompletion" value="partially">
+                    <span>Partially</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="taskCompletion" value="no">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label>How satisfied are you with your experience?</label>
+                <div class="rating">
+                  <input type="radio" id="star5" name="satisfaction" value="5" required>
+                  <label for="star5" title="Excellent">★</label>
+                  <input type="radio" id="star4" name="satisfaction" value="4">
+                  <label for="star4" title="Good">★</label>
+                  <input type="radio" id="star3" name="satisfaction" value="3">
+                  <label for="star3" title="Average">★</label>
+                  <input type="radio" id="star2" name="satisfaction" value="2">
+                  <label for="star2" title="Poor">★</label>
+                  <input type="radio" id="star1" name="satisfaction" value="1">
+                  <label for="star1" title="Terrible">★</label>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="feedbackComment">Any suggestions for improvement?</label>
+                <textarea id="feedbackComment" name="feedbackComment" rows="3" placeholder="Share your thoughts..."></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="userEmail">Email</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="Your email for follow-up" style="font-family: 'Playfair Display' ,'Inter', 'Libre Baskerville', sans-serif;">
+                <div class="consent-checkbox">
+                  <input type="checkbox" id="contactConsent" name="contactConsent">
+                  <label for="contactConsent">It's okay to contact me about my feedback</label>
+                </div>
+              </div>
+              
+              <button type="button" class="submit-button" onclick="sendEmail()">Submit Feedback</button>
+            </form>
+            <div id="feedbackThankYou" class="thank-you-message" style="display: none;">
+              <h4>Thank You!</h4>
+              <p>Your feedback helps us improve our website.</p>
+            </div>
+          </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
